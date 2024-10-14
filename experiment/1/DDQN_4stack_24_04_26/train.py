@@ -1,6 +1,7 @@
 import pathlib
 import sys
-sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent.absolute()))
+sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent.parent.absolute()))
+sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent.parent.absolute()) + "/bullet")
 
 import numpy as np
 import torch as th

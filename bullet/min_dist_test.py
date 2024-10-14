@@ -31,7 +31,7 @@ class MinDistWrapper(AbsEnv):
             self.min_dist.append(min(dist))
         player_pos = p_pos + self.env.ACTION[action]
         check = self.env._check_player_pos(player_pos)
-        if check:
+        if check and (action != 0):
             self.move_sum += 1
         if done:
             info["min_dist"] = self.min_dist

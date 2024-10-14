@@ -1,7 +1,8 @@
 import pathlib
 import sys
 
-sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent.absolute()))
+sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent.parent.absolute()))
+sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent.parent.absolute()) + "/bullet")
 import numpy as np
 import torch as th
 from bullet.env import BulletEnv, WINDOW_SIZE
@@ -32,7 +33,7 @@ def main():
     th.manual_seed(0)
     th.cuda.manual_seed(0)
 
-    max_steps = 1_000_000
+    max_steps = 50_000_000
     eval_interval = 500_000
 
     qnet = DQNnet2ch(output_dim=len(env.ACTION))
